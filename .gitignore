@@ -1,0 +1,14 @@
+
+# Compiled output
+chip8.exe
+*.o
+*.obj
+*.dll
+*.pdb
+
+# Local ROM files
+/roms/*
+!/roms/README.md
+
+# VS Code local settings
+.vscode/

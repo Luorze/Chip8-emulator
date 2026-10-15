@@ -1,0 +1,36 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build CHIP-8",
+      "type": "shell",
+      "command": "C:/msys64/ucrt64/bin/g++.exe",
+
+      "args": [
+        "-std=c++17",
+        "-g",
+        "-Isrc",
+        "-IC:/msys64/ucrt64/include/SDL2",
+        "src/main.cpp",
+        "src/chip8.cpp",
+        "-o",
+        "chip8.exe",
+        "-LC:/msys64/ucrt64/lib",
+        "-lmingw32",
+        "-lSDL2main",
+        "-lSDL2"
+      ],
+
+      "options": {
+        "env": {
+          "PATH": "C:/msys64/ucrt64/bin"
+        }
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$gcc"]
+    }
+  ]
+}
